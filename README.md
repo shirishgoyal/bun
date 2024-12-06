@@ -32,8 +32,7 @@ def deps do
 end
 ```
 
-Once installed, change your config (i.e. `config/config.exs` or
-`config/runtime.exs`) to pick your bun version of choice:
+Once installed, change your `config/config.exs` to pick your bun version of choice:
 
 ```elixir
 config :bun, version: "1.1.22"
@@ -79,7 +78,9 @@ config :bun,
 ```
 
 When `mix bun default` is invoked, the task arguments will be appended
-to the ones configured above.
+to the ones configured above. Note profiles must be configured in your
+`config/config.exs`, as `bun` runs without starting your application
+(and therefore it won't pick settings in `config/runtime.exs`).
 
 ## Adding to Phoenix
 
